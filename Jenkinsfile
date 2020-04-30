@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Check'
-        build 'MSBuild'
+        bat 'nuget restore Store.sln'
       }
     }
 
