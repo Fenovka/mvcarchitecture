@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'nuget restore Store.sln'
+        bat 'C:\\BuildTools\\nuget.exe restore Store.sln'
       }
     }
 
