@@ -15,7 +15,7 @@ pipeline {
 
     stage('Artifact Copy') {
       steps {
-        archiveArtifacts 'C:\\workspace\\mvcarchitecture_master'
+        archiveArtifacts '*'
       }
     }
 
