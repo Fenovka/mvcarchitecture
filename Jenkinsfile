@@ -16,7 +16,7 @@ pipeline {
     stage('Artifact Copy') {
       steps {
         bat 'C:\\BuildTools\\MSBuild\\14.0\\Bin\\MSBuild.exe Store.sln /p:DeployOnBuild=true /p:PublishProfile=LocalPublishProfile'
-        archiveArtifacts(artifacts: 'Store.Web\\bin\\Release\\Publish', allowEmptyArchive: true)
+        archiveArtifacts(artifacts: 'Store.Web/bin/Release/Publish/*', allowEmptyArchive: true)
       }
     }
 
