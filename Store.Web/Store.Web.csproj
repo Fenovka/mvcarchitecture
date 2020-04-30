@@ -170,6 +170,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Gadget.cshtml" />
     <Content Include="Views\Home\Filter.cshtml" />
+    <None Include="Properties\PublishProfiles\LocalPublishProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
