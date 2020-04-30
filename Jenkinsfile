@@ -16,7 +16,8 @@ pipeline {
     stage('Artifact Copy') {
       steps {
         bat 'C:\\BuildTools\\MSBuild\\14.0\\Bin\\MSBuild.exe Store.sln /p:DeployOnBuild=true /p:PublishProfile=LocalPublishProfile'
-        archiveArtifacts(artifacts: 'Store.Web/bin/Release/Publish/*', allowEmptyArchive: true)
+        powershell 'compress-archive -path \'C:\\workspace\\mvcarchitecture_master\\Store.Web\\bin\\Release\' -destinationpath \'.\\Release.zip\' -compressionlevel optimal'
+        archiveArtifacts(artifacts: 'Release.zip', allowEmptyArchive: true)
       }
     }
 
