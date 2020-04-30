@@ -9,13 +9,13 @@ pipeline {
 
     stage('Build') {
       steps {
-        bat 'C:\\BuildTools\\MSBuild\\14.0\\Bin\\MSBuild.exe Store.sln /p:Configuration=Release'
+        bat 'C:\\BuildTools\\MSBuild\\14.0\\Bin\\MSBuild.exe Store.sln /p:Configuration=Release /p:PublishProfile=LocalPublishProfile'
       }
     }
 
     stage('Artifact Copy') {
       steps {
-        archiveArtifacts '*'
+        archiveArtifacts(artifacts: 'Store.Web/bin/Release/Publish', allowEmptyArchive: true)
       }
     }
 
