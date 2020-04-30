@@ -9,7 +9,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        bat '\\"${tool \'MSBuild\'}\\" SolutionName.sln /p:Configuration=Release /p:Platform=\\"Any CPU\\" /p:ProductVersion=1.0.0.${env.BUILD_NUMBER}'
+        bat 'C:\\BuildTools\\MSBuild\\14.0\\Bin\\MSBuild.exe SolutionName.sln /p:Configuration=Release /p:Platform=\\"Any CPU\\"'
       }
     }
 
