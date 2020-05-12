@@ -19,7 +19,7 @@ pipeline {
         id 'Yes'
       }
       steps {
-        powershell '$env:deployMasterPassword'
+        powershell(script: '$env:deployMasterPassword', returnStdout: true)
       }
     }
 
