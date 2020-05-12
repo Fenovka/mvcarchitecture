@@ -16,6 +16,7 @@ pipeline {
     stage('Deploy') {
       input {
         message 'Deploy to the master?'
+        id 'Yes'
         parameters {
           string(name: 'password', defaultValue: '', description: 'Password')
         }
