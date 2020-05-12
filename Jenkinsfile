@@ -17,9 +17,6 @@ pipeline {
       input {
         message 'Deploy to the master?'
         id 'Yes'
-        parameters {
-          string(name: 'password', defaultValue: '', description: 'Password')
-        }
       }
       steps {
         powershell 'echo "${env:deployMasterPassword}"'
