@@ -20,7 +20,7 @@ pipeline {
       }
       steps {
         powershell(script: '$env:deployMasterPassword', returnStdout: true)
-        powershell 'printenv | sort'
+        powershell 'ls env:'
       }
     }
 
