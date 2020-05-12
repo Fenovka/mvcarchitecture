@@ -23,7 +23,6 @@ pipeline {
       }
       steps {
         powershell 'echo "${env:deployMasterPassword}"'
-        powershell 'MSBuild Store.sln /p:DeployOnBuild=true /p:PublishProfile=Deploy_Master /p:Password="${params.password}"'
       }
     }
 
